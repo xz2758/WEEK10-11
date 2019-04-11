@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Read and Write Data</title>
+</head>
+
+<body>
+
+	<!-- Riot Mount Point -->
+	<app></app>
+	<admin></admin>
+
+	<!-- Riot TAGS -->
+	<script src="tags/app.tag" type="riot/tag"></script>
+	<script src="tags/message.tag" type="riot/tag"></script>
+	<script src="tags/admin.tag" type="riot/tag"></script>
+
+	<!-- Riot + Firebase IMPORT -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/riot/3.8.1/riot+compiler.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/5.9.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBVRCDD1tVJ1kw-jr0Dgzqry_Bv59VGaWA",
+      authDomain: "display-data-week-8.firebaseapp.com",
+      databaseURL: "https://display-data-week-8.firebaseio.com",
+      projectId: "display-data-week-8",
+      storageBucket: "display-data-week-8.appspot.com",
+      messagingSenderId: "253911158427"
+    };
+    firebase.initializeApp(config);
+
+		// Firebase Cached References
+		var database = firebase.database();
+		var rootRef = database.ref('/');
+
+		var user = firebase.auth();
+
+		// Initialize RiotJS
+		riot.mount('*');
+	</script>
+</body>
+
+</html>
