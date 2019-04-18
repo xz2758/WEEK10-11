@@ -66,4 +66,5 @@
 			//same question, 4th time of encounter. Why do we need to call tag update here?
 			tag.update();
 		});
+		</script>
 </app>
